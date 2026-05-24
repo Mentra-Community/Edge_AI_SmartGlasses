@@ -4,16 +4,18 @@
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start",
     "ios": "expo run:ios",
     "android": "expo run:android",
     "web": "expo start --web"
   },
   "dependencies": {
-    "@mentra/bluetooth-sdk": "0.1.1",
+    "@dr.pogodin/react-native-fs": "^2.37.0",
+    "@kesha-antonov/react-native-background-downloader": "^4.5.4",
+    "@mentra/bluetooth-sdk": "^0.1.1",
     "expo": "~55.0.19",
     "expo-audio": "~55.0.14",
-    "expo-build-properties": "~55.0.13",
+    "expo-build-properties": "~55.0.14",
     "expo-dev-client": "~55.0.16",
     "expo-file-system": "~55.0.17",
     "expo-linear-gradient": "~55.0.13",
@@ -21,6 +23,7 @@
     "react": "19.2.0",
     "react-native": "0.83.6",
     "react-native-safe-area-context": "~5.6.2",
+    "react-native-sherpa-onnx": "^0.4.3",
     "react-native-svg": "15.15.3",
     "react-native-webview": "13.16.0"
   },

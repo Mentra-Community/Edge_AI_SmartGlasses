@@ -1,0 +1,39 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.mentra.gemma'
+version = '1.0.0'
+
+android {
+  namespace 'com.mentra.gemma'
+  compileSdk 36
+
+  defaultConfig {
+    versionCode 1
+    versionName '1.0.0'
+    minSdkVersion 31
+    targetSdkVersion 36
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = '17'
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  // LiteRT LM SDK — on-device Gemma 4 / Gemma 3n / Gemma 3 / DeepSeek inference.
+  implementation 'com.google.ai.edge.litertlm:litertlm-android:0.10.0'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+}

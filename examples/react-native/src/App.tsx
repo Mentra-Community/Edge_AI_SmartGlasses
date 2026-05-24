@@ -7,6 +7,7 @@ import { DeviceScreen } from './screens/DeviceScreen';
 import { CameraScreen } from './screens/CameraScreen';
 import { StreamScreen } from './screens/StreamScreen';
 import { SystemScreen } from './screens/SystemScreen';
+import { EdgeScreen } from './screens/EdgeScreen';
 import { ConsoleScreen } from './screens/ConsoleScreen';
 import { useMentraSdk } from './useMentraSdk';
 
@@ -28,7 +29,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" backgroundColor="#0A0E0C" />
       <KeyboardVisibleContext.Provider value={keyboardVisible}>
         <SafeAreaView style={styles.root} edges={['top']}>
           <View style={styles.screen}>
@@ -36,6 +37,7 @@ export default function App() {
             {tab === 'camera' && <CameraScreen sdk={sdk} />}
             {tab === 'stream' && <StreamScreen sdk={sdk} />}
             {tab === 'system' && <SystemScreen sdk={sdk} />}
+            {tab === 'edge' && <EdgeScreen sdk={sdk} />}
             {tab === 'console' && <ConsoleScreen sdk={sdk} />}
           </View>
           {!keyboardVisible && <TabBar active={tab} onChange={setTab} />}
@@ -46,6 +48,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fff' },
+  root: { flex: 1, backgroundColor: '#0A0E0C' },
   screen: { flex: 1 },
 });
